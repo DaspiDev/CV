@@ -1,0 +1,68 @@
+const data = [
+    {
+        image_url: '/images/blog/blog1.jpg',
+        title: "By spite about do of do allow blush",
+        category: "Design",
+        icon: "la la-newspaper-o",
+        date: 20,
+        month: "jan",
+    },
+    {
+        image_url: '/images/blog/blog2.jpg',
+        title: "Two Before Arrow Not Relied",
+        category: "coding",
+        icon: "la la-newspaper-o",
+        date: 19,
+        month: "jun",
+    },
+    {
+        image_url: '/images/blog/blog3.jpg',
+        title: "By spite about do of do allow blush",
+        category: "travel",
+        icon: "la la-newspaper-o",
+        date: 20,
+        month: "jun",
+    },
+    {
+        image_url: '/images/blog/blog1.jpg',
+        title: "By spite about do of do allow blush",
+        category: "Design",
+        icon: "la la-newspaper-o",
+        date: 20,
+        month: "jan",
+    },
+    {
+        image_url: '/images/blog/blog2.jpg',
+        title: "Two Before Arrow Not Relied",
+        category: "coding",
+        icon: "la la-newspaper-o",
+        date: 19,
+        month: "jun",
+    },
+    {
+        image_url: '/images/blog/blog3.jpg',
+        title: "By spite about do of do allow blush",
+        category: "travel",
+        icon: "la la-newspaper-o",
+        date: 20,
+        month: "jun",
+    },
+    {
+        image_url: '/images/blog/blog1.jpg',
+        title: "Two Before Arrow Not Relied",
+        category: "coding",
+        icon: "la la-newspaper-o",
+        date: 19,
+        month: "jun",
+    },
+    {
+        image_url: '/images/blog/blog2.jpg',
+        title: "By spite about do of do allow blush",
+        category: "travel",
+        icon: "la la-newspaper-o",
+        date: 20,
+        month: "jun",
+    },
+];
+
+export default data;

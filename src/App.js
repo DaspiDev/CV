@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import gsap from "gsap";
 import Loader from "./components/Loader";
 
+//pages
 import HomePage from "./pages/home.js";
 import HomeRtlPage from "./pages/home-rtl.js";
 import HomeVideoPage from "./pages/home-video";
@@ -79,8 +80,9 @@ function App() {
           <Route path="/blog-rtl" component={BlogRtlPage} />
           <Route path="/blog-post-rtl" component={BlogRtlPost} />
 
-          <Route path="*" component={HomePage} />
-
+          <Route path="*">
+            <Redirect to="/home" />
+          </Route>
         </Switch>
       </BrowserRouter>
       <ToastContainer />

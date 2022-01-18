@@ -88,7 +88,7 @@ const Blog = ()=> {
                           </div>
                         </div>
                         <div className="desc">
-                          <div className="name">{title}</div>
+                          <Link to="/blog-post" className="name">{title}</Link>
                           <div className="category">{category}</div>
                         </div>
                       </div>

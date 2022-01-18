@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { toast } from "react-toastify";
 
 import Map from "./Map";
-import Map2 from "./Map2";
+// import Map2 from "./Map2";
 import { overlayAnimation } from "../App";
 import Overlay from "./Overlay";
 

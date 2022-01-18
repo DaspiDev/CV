@@ -17,11 +17,11 @@ const BlogPage = () => {
     };
     useEffect(() => {
         overlayAnimation();
-      }, []);
-    
+    }, []);
+
     return (
         <Tabs as="div" className="page">
-      <Overlay />
+            <Overlay />
 
             <TabList as="header" className={`${toggleSidebar ? "header opened" : "header"}`}>
                 {/* <!-- logo --> */}
@@ -34,14 +34,14 @@ const BlogPage = () => {
                 {/* <!-- menu --> */}
                 <div className="top-menu">
                     <ul>
-                    {menu && menu.map((item, i) => (
-              <Tab as="li" key={i}>
-                <a href={item.to}>
-                  <span className={item.icon}></span>
-                  <span className="link">{item.title}</span>
-                </a>
-              </Tab>
-            ))}
+                        {menu && menu.map((item, i) => (
+                            <Tab as="li" key={i}>
+                                <Link to="/">
+                                    <span className={item.icon}></span>
+                                    <span className="link">{item.title}</span>
+                                </Link>
+                            </Tab>
+                        ))}
                     </ul>
                 </div>
 

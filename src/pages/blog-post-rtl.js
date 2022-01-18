@@ -31,10 +31,10 @@ const BlogRtlPost = () => {
                     <ul>
                         {menu && menu.map((item, i) => (
                             <Tab as="li" key={i}>
-                                <a href={item.to}>
+                                <Link to="/">
                                     <span className={item.icon}></span>
                                     <span className="link">{item.title}</span>
-                                </a>
+                                </Link>
                             </Tab>
                         ))}
                     </ul>

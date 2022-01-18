@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import gsap from "gsap";
 import Loader from "./components/Loader";
@@ -61,14 +61,17 @@ function App() {
       <BrowserRouter>
         <Switch>
           {/* <ThemePanel /> */}
-          <Route path="/" exact={true} component={HomePage} />
+          <Route exact path="/">
+            <Redirect to="/home" />
+          </Route>
+
           <Route path="/home" component={HomePage} />
           <Route path="/home-video" component={HomeVideoPage} />
           <Route path="/home-particles" component={HomeParticlePage} />
           <Route path="/home-bgcolor" component={HomeColorPage} />
           <Route path="/blog" component={BlogPage} />
           <Route path="/blog-post" component={BlogPost} />
-          
+
           <Route path="/home-rtl" component={HomeRtlPage} />
           <Route path="/home-video-rtl" component={HomeVideoRtlPage} />
           <Route path="/home-particles-rtl" component={HomeParticleRtlPage} />

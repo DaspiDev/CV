@@ -244,7 +244,7 @@ const About = () => {
                       </ul>
                     </div>
                     <div className="lnks">
-                      <a href="#" className="lnk">
+                      <a href="#buy" className="lnk">
                         Buy <span>Basic</span>
                       </a>
                     </div>
@@ -275,7 +275,7 @@ const About = () => {
                       </ul>
                     </div>
                     <div className="lnks">
-                      <a href="#" className="lnk">
+                      <a href="#buy" className="lnk">
                         Buy <span>Pro</span>
                       </a>
                     </div>
@@ -336,7 +336,7 @@ const About = () => {
                     >
                       <div className="client-item card-box">
                         <div className="image">
-                          <a target="_blank" href={link}>
+                          <a target="_blank" rel="noreferrer"  href={link}>
                             <img src={image_url} alt={text} />
                           </a>
                         </div>

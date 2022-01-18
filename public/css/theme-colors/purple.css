@@ -16,11 +16,11 @@ a:hover {
 	background: #bb68c8;
 }
 
-.header .top-menu ul li.active a , .react-tabs__tab--selected a{
+.header .top-menu ul li.active a, .header .react-tabs__tab.react-tabs__tab--selected a{
 	color: #bb68c8;
 }
 
-.header .top-menu ul li.active a .icon , .react-tabs__tab--selected a .icon{
+.header .top-menu ul li.active a .icon , .header .react-tabs__tab.react-tabs__tab--selected a .icon{
 	color: #bb68c8;
 }
 

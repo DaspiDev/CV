@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import styled from "styled-components";
 import PopupCard from "./PopupCard";
 import profile_img_3 from "../images/profile3.jpg";
@@ -15,6 +15,7 @@ import { overlayAnimation } from "../App";
 import Overlay from "./Overlay";
 
 const Work = () => {
+  const ref = useRef();
   // const { openPopup, popup, popupValue, navbarLink } = useMainContext();
   const [popupValue, setPopupValue] = useState(null);
   const [btnValue, setbtnValue] = useState(0);
@@ -92,6 +93,7 @@ const Work = () => {
     overlayAnimation();
   }, []);
 
+
   return (
     <>
       <Overlay />
@@ -149,7 +151,7 @@ const Work = () => {
                 </div>
 
                 {/* <!-- work items --> */}
-                <div className="row grid-items">
+                <div className="row grid-items" ref={ref}>
                   {/* <!-- work item photo --> */}
                   {workItem.map((item) => {
                     const { image_url, desc, category, icon, id } = item;
@@ -183,11 +185,11 @@ const Work = () => {
                             </div>
                           </div>
                         </div>
-
                       </React.Fragment>
                     );
                   })}
                 </div>
+
               </div>
             </div>
           </div>
@@ -196,7 +198,7 @@ const Work = () => {
           <>
             <div className="popup_overlay"></div>
             <div className="popup popup_active">
-              <PopupCard item={popupValue} setPopupValue={()=> setPopupValue(null)} />
+              <PopupCard item={popupValue} setPopupValue={() => setPopupValue(null)} />
             </div>
           </>
         )}

@@ -1,7 +1,7 @@
 import React from "react";
 import { MdClose } from "react-icons/md";
 import styled from "styled-components";
-import works_img_4 from "../images/works/work4.jpg";
+import works_img_4 from "../images/works/work1.jpg";
 
 const PopupCard = (props) => {
 

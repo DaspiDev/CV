@@ -61,7 +61,7 @@ const Hero = ({ type = 'bgColor' }) => {
             <div className="vertical-center">
               {/* Started titles */}
               <div className="title">
-                <span>Patrick</span> Johansson
+                M. David Fdez
               </div>
               <div
                 className="subtitle"
@@ -72,14 +72,18 @@ const Hero = ({ type = 'bgColor' }) => {
                   alignItems: "center",
                 }}
               >
-                I am a
+                I can work with
                 <span style={{ color: "#fff" }}>
                   <Typewriter
                     words={[
-                      "web developer.",
-                      "blogger.",
-                      "freelancer.",
-                      "photographer.",
+                      "ReactJS.",
+                      "Redux Saga.",
+                      "NextJS.",
+                      "React Native.",
+                      "Android.",
+                      "Python.",
+                      "JavaScript.",
+                      "HTML-CSS."
                     ]}
                     loop={5}
                     cursor

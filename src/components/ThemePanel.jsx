@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import changeFavicon from "../hooks/changeFavicon";
 
 const ThemePanel = ({ is_rtl }) => {
 
@@ -80,6 +80,7 @@ const ThemePanel = ({ is_rtl }) => {
    * handle layout style 
    */
   const handleLayoutStyle = (Data_color) => {
+    changeFavicon(Data_color)
 
     // remove all theme color
     document.querySelectorAll("link[href*='css/theme-colors/']")
@@ -92,6 +93,7 @@ const ThemePanel = ({ is_rtl }) => {
       style = document.createElement('link');
     style.rel = 'stylesheet';
     style.href = "/css/theme-colors/" + Data_color + ".css";
+
 
     /**
      * appendChild
@@ -150,19 +152,19 @@ const ThemePanel = ({ is_rtl }) => {
         </div>
         <div className="theme_menu">
 
-          <h4>Color Switcher</h4>
+          <h4 style={{marginTop: 15}}>Cambiar color</h4>
           <div className="segment">
             <ul className="theme layout_style">
               {layoutStyleData.map(
                 ({ title, Data_color, background }, index) => {
                   return (
                     <li key={index}>
-                      <a
+                      <a 
                         title={title}
-                        href="#change_background_style"
+                        //href=""
                         onClick={() => handleLayoutStyle(Data_color)}
                         data-color={Data_color}
-                        style={{ backgroundColor: `${background}` }}
+                        style={{ backgroundColor: `${background}`, cursor:'pointer' }}
                       >&nbsp;</a>
                     </li>
                   );
@@ -172,65 +174,19 @@ const ThemePanel = ({ is_rtl }) => {
           </div>
 
           <div className="clear"></div>
-          <h4>RTL/LTR Version</h4>
-          <ul className="theme demo_list">
+          <h4>Idioma</h4>
+          <ul className="theme demo_list" style={{marginBottom: 10}}>
             <li style={{ width: "50%" }}>
-              <Link to="home-rtl" onClick={(e) => {e.preventDefault(); handleHtmlDir('rtl')}}>
-                <strong>RTL</strong>
-              </Link>
+              <span style={{cursor:'pointer'}} onClick={(e) => {console.info("ES")}}>
+                <strong>Spanish</strong>
+              </span>
             </li>
             <li style={{ width: "50%" }}>
-              <Link to="home" onClick={(e) => {e.preventDefault(); handleHtmlDir('ltl')}}>
-                <strong>LTL</strong>
-              </Link>
+              <span style={{cursor:'pointer'}} onClick={(e) => {console.info("EN")}}>
+                <strong>English</strong>
+              </span>
             </li>
           </ul>
-
-          <div className="clear"></div>
-          <h4>Background Demos</h4>
-          <ul className="theme demo_list">
-            <li style={{ width: "50%" }}>
-              <Link
-                to="home"
-                onClick={() => handleBg('BG Image')}
-                style={{ cursor: "pointer" }}
-              >
-                <strong>BG Image</strong>
-              </Link>
-            </li>
-            <li style={{ width: "50%" }}>
-              <Link
-                to="home-video"
-                onClick={() => handleBg('BG Video')}
-                style={{ cursor: "pointer" }}
-              >
-                <strong>BG Video</strong>
-              </Link>
-            </li>
-            <li style={{ width: "50%" }}>
-              <Link
-                to="home-particles"
-                onClick={() => handleBg('BG Particles')}
-                style={{ cursor: "pointer" }}
-              >
-                <strong>BG Particles</strong>
-              </Link>
-            </li>
-            <li style={{ width: "50%" }} >
-              <Link
-                to="home-bgcolor"
-                onClick={() => handleBg('BG Color')}
-                style={{ cursor: "pointer" }}
-              >
-                <strong>BG Color</strong>
-              </Link>
-            </li>
-          </ul>
-
-          <div className="clear"></div>
-          <a href="https://themeforest.net/" target="_blank" rel="noreferrer" className="buy-btn">
-            <i className="ion ion-android-cart"></i>Buy Template
-          </a>
         </div>
       </div>
     </>

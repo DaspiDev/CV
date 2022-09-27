@@ -1,33 +1,33 @@
 const menu = [
     {
-        to: "#home",
+        to: "/home",
         icon: 'icon la la-home',
-        title: 'Home'
+        title: 'Home',
+        active: false
     },
     {
-        to: "#about",
+        to: "/about",
         icon: 'icon la la-user',
-        title: 'about'
+        title: 'about',
+        active: true
     },
     {
-        to: "#resume",
+        to: "/resume",
         icon: 'icon la la-gear',
-        title: 'resume'
+        title: 'resume',
+        active: true
     },
     {
-        to: "#portfolio",
+        to: "/portfolio",
         icon: 'icon la la-eye',
-        title: 'portfolio'
+        title: 'portfolio',
+        active: true
     },
     {
-        to: "#blog",
-        icon: 'icon la la-newspaper-o',
-        title: 'blog'
-    },
-    {
-        to: "#contact",
+        to: "/contact",
         icon: 'icon la la-envelope',
-        title: 'contact'
+        title: 'contact',
+        active: true
     },  
 ];
 export default menu;

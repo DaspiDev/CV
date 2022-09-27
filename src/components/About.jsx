@@ -143,33 +143,25 @@ const About = () => {
             <div className="content inner-top">
               <div className="row">
                 <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
-                  <div className="title-bg">About Me</div>
+                  <div className="title-bg">Sobre mí</div>
                   <div className="text">
                     <p>
-                      <strong>Hello, I’m a Patrick</strong>, web-developer based
-                      on Paris. <br />I have rich experience in web site design
-                      & building <br />
-                      and customization. Also I am good at{" "}
+                      <strong>Me llamo Manuel David</strong>, soy desarrollador Front-End y vivo actualmente en Jerez de la Frontera. <br />
+                      Estoy especializado en <strong>ReactJS</strong> pero me encanta aprender nuevas tecnologías. <br />
+                      También destaco especialmente en{" "}
                       <strong>
-                        html, css, <br />
-                        wordpress, php, jquery, bootstrap.
+                        Redux Saga, React Native, Android y NextJS.
                       </strong>
                     </p>
                   </div>
                   <div className="circle-bts">
-                    <a href="#download">
+                    <a href="/CV_MDFM_FRONTDEV.pdf" download>
                       <span>
-                        <i className="icon la la-download"></i>Download CV
+                        <i className="icon la la-download"></i>Descargar CV
                       </span>
                     </a>
-                    <a href="https://github.com/" target="_blank" rel="noreferrer">
-                      <i className="icon la la-github"></i>
-                    </a>
-                    <a href="https://stack-overflow.com/" target="_blank" rel="noreferrer">
-                      <i className="icon la la-stack-overflow"></i>
-                    </a>
-                    <a href="https://skype.com/" target="_blank" rel="noreferrer">
-                      <i className="icon la la-skype"></i>
+                    <a href="https://es.linkedin.com/in/manuelfde4" target="_blank" rel="noreferrer">
+                      <i className="icon la ion-social-linkedin"></i>
                     </a>
                   </div>
                 </div>

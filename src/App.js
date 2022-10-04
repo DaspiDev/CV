@@ -58,18 +58,18 @@ function App() {
       <BrowserRouter>
         <Switch>
           {/* <ThemePanel /> */}
-          <Route exact path="/">
-            <Redirect to="/home" />
+          <Route exact path="/CV">
+            <Redirect to="/CV/home" />
           </Route>
 
-          <Route path="/home" component={HomePage} />
-          <Route path="/about" component={About} />
-          <Route path="/resume" component={Resume} />
+          <Route path="/CV/home" component={HomePage} />
+          <Route path="/CV/about" component={About} />
+          <Route path="/CV/resume" component={Resume} />
           {/*<Route path="/portfolio" component={HomePage} />*/}
-          <Route path="/contact" component={Contact} />
+          <Route path="/CV/contact" component={Contact} />
 
           <Route path="*">
-            <Redirect to="/home" />
+            <Redirect to="/CV/home" />
           </Route>
         </Switch>
       </BrowserRouter>

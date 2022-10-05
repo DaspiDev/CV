@@ -59,14 +59,14 @@ function App() {
         <Switch>
           {/* <ThemePanel /> */}
           <Route exact path="/CV/">
-            <Redirect to="/CV/#/home" />
+            <Redirect to="/CV/home" />
           </Route>
 
-          <Route path="/CV/#/home" component={HomePage} />
-          <Route path="/CV/#/about" component={About} />
-          <Route path="/CV/#/resume" component={Resume} />
+          <Route path="/CV/home" component={HomePage} />
+          <Route path="/CV/about" component={About} />
+          <Route path="/CV/resume" component={Resume} />
           {/*<Route path="/portfolio" component={HomePage} />*/}
-          <Route path="/CV/#/contact" component={Contact} />
+          <Route path="/CV/contact" component={Contact} />
 
           <Route path="*">
             <Redirect to="/CV/" />

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Switch, BrowserRouter, Redirect } from "react-router-dom";
+import { Route, Switch, HashRouter, Redirect } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import gsap from "gsap";
 import Loader from "./components/Loader";
@@ -55,24 +55,24 @@ function App() {
           <Loader />
         </div>
       )}
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           {/* <ThemePanel /> */}
-          <Route exact path="/CV">
-            <Redirect to="/CV/home" />
+          <Route exact path="/CV/">
+            <Redirect to="/CV/#/home" />
           </Route>
 
-          <Route path="/CV/home" component={HomePage} />
-          <Route path="/CV/about" component={About} />
-          <Route path="/CV/resume" component={Resume} />
+          <Route path="/CV/#/home" component={HomePage} />
+          <Route path="/CV/#/about" component={About} />
+          <Route path="/CV/#/resume" component={Resume} />
           {/*<Route path="/portfolio" component={HomePage} />*/}
-          <Route path="/CV/contact" component={Contact} />
+          <Route path="/CV/#/contact" component={Contact} />
 
           <Route path="*">
-            <Redirect to="/CV/home" />
+            <Redirect to="/CV/" />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
       <ToastContainer />
     </>
   );

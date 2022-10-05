@@ -58,18 +58,18 @@ function App() {
       <HashRouter>
         <Switch>
           {/* <ThemePanel /> */}
-          <Route exact path="/CV/">
-            <Redirect to="/CV/home" />
+          <Route exact path="/">
+            <Redirect to="/home" />
           </Route>
 
-          <Route path="/CV/home" component={HomePage} />
-          <Route path="/CV/about" component={About} />
-          <Route path="/CV/resume" component={Resume} />
+          <Route path="/home" component={HomePage} />
+          <Route path="/about" component={About} />
+          <Route path="/resume" component={Resume} />
           {/*<Route path="/portfolio" component={HomePage} />*/}
-          <Route path="/CV/contact" component={Contact} />
+          <Route path="/contact" component={Contact} />
 
           <Route path="*">
-            <Redirect to="/CV/" />
+            <Redirect to="/home" />
           </Route>
         </Switch>
       </HashRouter>

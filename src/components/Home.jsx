@@ -7,8 +7,9 @@ import Bg from "../images/bg.jpg";
 import video_1 from "../video/intro_1.mp4";
 import { overlayAnimation } from "../App";
 import Overlay from "./Overlay";
+import { isMobileOnly } from 'react-device-detect';
 
-const Hero = ({ type = 'bgColor' }) => {
+const Home = ({ type = 'bgColor' }) => {
   // type { bgParticles, bgImage, bgvideo, bgColor, navbarLink }
   useEffect(() => {
     overlayAnimation();
@@ -34,14 +35,14 @@ const Hero = ({ type = 'bgColor' }) => {
             ></div>
           )}
 
-          {type === 'bgImage' && (
+          {(type === 'bgImage' || (type === 'bgvideo' && isMobileOnly)) && (
             <div
               className="slide"
               style={{ backgroundImage: `url(${Bg})` }}
             ></div>
           )}
 
-          {type === 'bgvideo' && (
+          {type === 'bgvideo' && !isMobileOnly && (
             <>
               <div id="video-bg" className="slide" >
                 <div className="video_container">
@@ -103,7 +104,7 @@ const Hero = ({ type = 'bgColor' }) => {
   );
 };
 
-export default Hero;
+export default Home;
 
 const HomeStyled = styled.div`
   .grid_anim {

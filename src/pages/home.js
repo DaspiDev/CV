@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import { Link } from "react-router-dom";
 import ThemePanel from "../components/ThemePanel";
-import Hero from "../components/Hero";
+import Home from "../components/Home";
 import About from "../components/About";
 import Resume from "../components/Resume";
 import Contact from "../components/Contact";
@@ -16,7 +16,6 @@ const HomeVideoPage = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
   useEffect(() => {
     overlayAnimation();
-    console.info("MENU?", menu)
   }, []);
 
   return (
@@ -26,7 +25,7 @@ const HomeVideoPage = () => {
       <div className="container">
 
         <TabPanel>
-          <Hero type="bgvideo"/>
+          <Home type="bgvideo"/>
         </TabPanel>
       </div>
     </Tabs>

@@ -1,30 +1,30 @@
 const menu = [
     {
-        to: "/home",
+        to: "/CV/#/home",
         icon: 'icon la la-home',
         title: 'Home',
         active: false
     },
     {
-        to: "/about",
+        to: "/CV/#/about",
         icon: 'icon la la-user',
         title: 'about',
         active: true
     },
     {
-        to: "/resume",
+        to: "/CV/#/resume",
         icon: 'icon la la-gear',
         title: 'resume',
         active: true
     },
     {
-        to: "/portfolio",
+        to: "/CV/#/portfolio",
         icon: 'icon la la-eye',
         title: 'portfolio',
         active: true
     },
     {
-        to: "/contact",
+        to: "/CV/#/contact",
         icon: 'icon la la-envelope',
         title: 'contact',
         active: true

@@ -2,19 +2,19 @@ const menu = [
     {
         to: "/CV/#/home",
         icon: 'icon la la-home',
-        title: 'Home',
+        title: 'Inicio',
         active: false
     },
     {
-        to: "/CV/#/about",
+        to: "/CV/#/informacion",
         icon: 'icon la la-user',
-        title: 'about',
+        title: 'Información',
         active: true
     },
     {
-        to: "/CV/#/resume",
+        to: "/CV/#/curriculum",
         icon: 'icon la la-gear',
-        title: 'resume',
+        title: 'Curriculum',
         active: true
     },
     {

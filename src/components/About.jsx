@@ -146,16 +146,16 @@ const About = () => {
                   <div className="title-bg">Sobre mí</div>
                   <div className="text">
                     <p>
-                      <strong>Me llamo Manuel David</strong>, soy desarrollador Front-End y vivo actualmente en Jerez de la Frontera. <br />
+                      <strong>Me llamo Manuel David</strong>, soy desarrollador Front-End y vivo en Jerez de la Frontera. <br />
                       Estoy especializado en <strong>ReactJS</strong> pero me encanta aprender nuevas tecnologías. <br />
                       También destaco especialmente en{" "}
                       <strong>
-                        Redux Saga, React Native, Android y NextJS.
+                        VueJS, Redux Saga, React Native, Android y NextJS.
                       </strong>
                     </p>
                   </div>
                   <div className="circle-bts">
-                    <a href="/CV_MDFM_FRONTDEV.pdf" download>
+                    <a href="./CV_MDFM_FRONTDEV_.pdf" download>
                       <span>
                         <i className="icon la la-download"></i>Descargar CV
                       </span>

@@ -7,8 +7,8 @@ import changeFavicon from "./hooks/changeFavicon";
 
 //pages
 import HomePage from "./pages/home";
-import About from "./pages/about";
-import Resume from "./components/Resume";
+import AboutPage from "./pages/about";
+import ResumePage from "./pages/resume";
 import Contact from "./components/Contact";
 // import Portfolio from "./Portfolio";
 
@@ -63,8 +63,8 @@ function App() {
           </Route>
 
           <Route path="/home" component={HomePage} />
-          <Route path="/about" component={About} />
-          <Route path="/resume" component={Resume} />
+          <Route path="/informacion" component={AboutPage} />
+          <Route path="/curriculum" component={ResumePage} />
           {/*<Route path="/portfolio" component={HomePage} />*/}
           <Route path="/contact" component={Contact} />
 

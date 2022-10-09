@@ -6,6 +6,8 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import useOnScreen from "../hooks/useOnScreen";
 import { overlayAnimation } from "../App";
 import Overlay from "./Overlay";
+import curriculumExperience from '../data/curriculumExperience.js'
+import curriculumEducation from '../data/curriculumEducation.js'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,6 +57,7 @@ const Resume = () => {
   useEffect(() => {
     overlayAnimation();
   }, [personalSkillOnScreen]);
+
   return (
     <>
       <Overlay />
@@ -76,7 +79,7 @@ const Resume = () => {
             <div className="content inner-top">
               <div className="row">
                 <div className=" col col-m-12 col-t-12 col-d-12 col-d-lg-12">
-                  <div className="title-bg">Resume</div>
+                  <div className="title-bg">Curriculum</div>
                 </div>
               </div>
             </div>
@@ -85,92 +88,63 @@ const Resume = () => {
             <div className="content resume">
               <div className="row">
                 <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
-                  {/* <!-- title --> */}
-                  <div className="title">
-                    <span>My</span> Experience
-                  </div>
-
-                  {/* <!-- resume items --> */}
-                  <div className="resume-items card-box">
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Web Development</div>
-                      <div className="date">
-                        2013-Present <span>|</span> Facebook Inc.
-                      </div>
-                      <p>
-                        Collaborate with creative and development teams on the
-                        execution of ideas.
-                      </p>
+                    {/* <!-- title --> */}
+                    <div className="title">
+                        <span>Mi</span> Experiencia
                     </div>
 
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Front-end Developer</div>
-                      <div className="date">
-                        2011-2012 <span>|</span> Google Inc.
-                      </div>
-                      <p>
-                        Monitored technical aspects of the front-end delivery
-                        for several projects.
-                      </p>
-                    </div>
-
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Senior Developer</div>
-                      <div className="date">
-                        2009-2010 <span>|</span> Abc Inc.
-                      </div>
-                      <p>
-                        Optimize website performance using latest technology.
-                      </p>
-                    </div>
-                  </div>
+                    {/* <!-- Curriculum items --> */}
+                    {
+                        curriculumExperience.map((element, idx) => 
+                                <div className="resume-items card-box" key={idx}>
+                                    <div className="resume-item">
+                                        <div className="name">{element.title}</div>
+                                        <div className="date">
+                                        {element.range} <span>|</span> {element.employer}
+                                        </div>
+                                        {
+                                            element.phases.length > 0 && 
+                                            <div className="phases-container">
+                                                {element.phases.map((phase, idx) => 
+                                                    <div className="resume-items card-box gap-box" key={"phase" + idx}>
+                                                        <div className="resume-item">
+                                                            <div className="name">{phase.title}</div>
+                                                            <div className="date">
+                                                            {phase.technologies} 
+                                                            </div>
+                                                            <p>
+                                                            {phase.text}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                        )
+                    }
                 </div>
                 <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
                   {/* <!-- title --> */}
                   <div className="title">
-                    <span>My</span> Education
+                    <span>Mi</span> Educación
                   </div>
 
                   {/* <!-- resume items --> */}
                   <div className="resume-items card-box">
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Art University</div>
-                      <div className="date">
-                        2006-2008 <span>|</span> New York
-                      </div>
-                      <p>
-                        Bachelor's Degree in Computer Science ABC Technical
-                        Institute, Jefferson, Missouri
-                      </p>
-                    </div>
-
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Programming Course</div>
-                      <div className="date">
-                        2005-2006 <span>|</span> Paris
-                      </div>
-                      <p>
-                        Bachelor's Degree in Computer Science ABC Technical
-                        Institute, Jefferson, Missouri
-                      </p>
-                    </div>
-
-                    {/* <!-- resume item --> */}
-                    <div className="resume-item">
-                      <div className="name">Web Design Course</div>
-                      <div className="date">
-                        2004-2005 <span>|</span> London
-                      </div>
-                      <p>
-                        Converted Photoshop layouts to web pages using HTML,
-                        CSS, and JavaScript
-                      </p>
-                    </div>
+                    {/* <!-- Curriculum items --> */}
+                    {
+                        curriculumEducation.map(element => 
+                            <div className="resume-item">
+                                <div className="name">{element.title}</div>
+                                <div className="date">
+                                    {element.range} <span>|</span> {element.center}
+                                </div>
+                                <p>{element.text}</p>
+                            </div>
+                        )
+                    }
                   </div>
                 </div>
               </div>

@@ -16,25 +16,7 @@ const AboutPage = () => {
       <LateralTabs main="about"/>
       <ThemePanel />
       <div className="container">
-        <TabPanel>
-          <About />
-        </TabPanel>
-        {/*
-        <TabPanel>
-        </TabPanel>
-        <TabPanel>
-          <Resume />
-        </TabPanel>
-        <TabPanel>
-          <Portfolio />
-        </TabPanel>
-        <TabPanel>
-          <Blog />
-        </TabPanel>
-        <TabPanel>
-          <Contact />
-        </TabPanel>
-         */}
+        <About />
       </div>
     </Tabs>
   );

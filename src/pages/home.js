@@ -23,10 +23,7 @@ const HomeVideoPage = () => {
       <LateralTabs main="home"/>
       <ThemePanel />
       <div className="container">
-
-        <TabPanel>
-          <Home type="bgvideo"/>
-        </TabPanel>
+        <Home type="bgvideo"/>
       </div>
     </Tabs>
   );

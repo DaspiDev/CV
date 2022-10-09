@@ -7,7 +7,7 @@ const LateralTabs = ()=> {
   const [toggleSidebar, setToggleSidebar] = useState(false);
 
   useEffect(()=> {
-    console.info("MENUUU", menu)
+    //console.info("MENUUU", menu)
   }, [])
   return (
     <TabList as="header" className={`${toggleSidebar ? "header opened" : "header"}`}>

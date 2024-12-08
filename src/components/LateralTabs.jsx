@@ -14,7 +14,7 @@ const LateralTabs = ()=> {
       {/* <!-- logo --> */}
       <div className="logo">
         <Link to={`/`}>
-          <span>D</span>
+          <span>L</span>
         </Link>
       </div>
 

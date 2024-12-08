@@ -62,7 +62,7 @@ const Home = ({ type = 'bgColor' }) => {
             <div className="vertical-center">
               {/* Started titles */}
               <div className="title">
-                M. David Fdez
+                Laura Fdez
               </div>
               <div
                 className="subtitle"

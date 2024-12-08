@@ -9,7 +9,8 @@ function changeFavicon (color) {
         link.rel = 'icon';
         document.getElementsByTagName('head')[0].appendChild(link);
     }
-    link.href = `/favicons/favicon${color}.ico`;
+    //Añadido CV al link de public porque github pages me obliga a poner CV delante
+    link.href = `/CV/favicons/favicon${color}.ico`;
   }
 
 export default changeFavicon;

@@ -84,7 +84,10 @@ const ThemePanel = ({ is_rtl }) => {
 
     // remove all theme color
     document.querySelectorAll("link[href*='css/theme-colors/']")
-      .forEach(element => element.remove());
+      .forEach(element => {
+        console.info("stylesheet", element)
+        element.remove()
+      });
 
     /**
      * assign a new stylesheet
@@ -92,7 +95,8 @@ const ThemePanel = ({ is_rtl }) => {
     var head = document.getElementsByTagName('head')[0],
       style = document.createElement('link');
     style.rel = 'stylesheet';
-    style.href = "/css/theme-colors/" + Data_color + ".css";
+    //Añadido CV al link de public por el tema de que github pages me obliga a poner CV delante
+    style.href = "/CV/css/theme-colors/" + Data_color + ".css";
 
 
     /**

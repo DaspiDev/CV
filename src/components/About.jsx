@@ -1,127 +1,23 @@
 import React, { useEffect } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faReact } from '@fortawesome/free-brand-svg-icons';
 import ProfileImg from "../images/profile.jpg";
 import client_img_1 from "../images/clients/client_1.png";
 import client_img_2 from "../images/clients/client_2.png";
 import client_img_3 from "../images/clients/client_3.png";
 import client_img_4 from "../images/clients/client_4.png";
+import technologiesList from '../data/technologiesList.js'
 import { overlayAnimation } from "../App";
 import Overlay from "./Overlay";
 
+
+
 const About = () => {
-  const serviceItemData = [
-    {
-      icon_url: "la la-html5",
-      title: "Web Development",
-      text: "Modern and mobile-ready website that will help of your marketing.",
-    },
-    {
-      icon_url: "la la-music",
-      title: "Music Writing",
-      text: "Music copying, transcription, arranging and composition Services.",
-    },
-    {
-      icon_url: "la la-bullhorn",
-      title: "Advetising",
-      text: "Advertising services include television, radio, print, mail and web.",
-    },
-    {
-      icon_url: "la la-gamepad",
-      title: "Game Development",
-      text: "Developing memorable and unique mobile android, ios games.",
-    },
-    {
-      icon_url: "la la-area-chart",
-      title: "Analytics",
-      text: "Basic, advanced, custom implementations and online media analysis.",
-    },
-    {
-      icon_url: "la la-camera-retro",
-      title: "Hosting",
-      text: "Full-day or half-day photo shoots with all necessary equipment.",
-    },
-  ];
-
-  const FactsData = [
-    {
-      icon_url: "la la-headphones",
-      title: "47 Albumes Listened",
-    },
-    {
-      icon_url: "la la-trophy",
-      title: "15 Awards Won",
-    },
-    {
-      icon_url: "la la-lightbulb-o",
-      title: "54 Projects Completed",
-    },
-    {
-      icon_url: "la la-flag-o",
-      title: "10 Countries Visited",
-    },
-    {
-      icon_url: "la la-book",
-      title: "50+ Books Readed",
-    },
-    {
-      icon_url: "la la-code",
-      title: "100 000 Lines of Code",
-    },
-    {
-      icon_url: "la la-smile-o",
-      title: "49 Satisfied Customers",
-    },
-    {
-      icon_url: "la la-bicycle",
-      title: "1250 km Cycled",
-    },
-  ];
-
-  const clientData = [
-    {
-      image_url: client_img_1,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_2,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_3,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_4,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_1,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_2,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_3,
-      link: "https://www.google.com",
-      text: "client",
-    },
-    {
-      image_url: client_img_4,
-      link: "https://www.google.com",
-      text: "client",
-    },
-  ];
 
   useEffect(() => {
     overlayAnimation();
   }, []);
+
 
   return (
     <>
@@ -146,8 +42,8 @@ const About = () => {
                   <div className="title-bg">Sobre mí</div>
                   <div className="text">
                     <p>
-                      <strong>Me llamo Manuel David</strong>, soy desarrollador Front-End y vivo en Jerez de la Frontera. <br />
-                      Estoy especializado en <strong>ReactJS</strong> pero me encanta aprender nuevas tecnologías. <br />
+                      Me llamo <strong>Laura</strong>, soy desarrolladora Front-End y vivo en Jerez de la Frontera. <br />
+                      Estoy especializada en <strong>ReactJS</strong> pero me encanta aprender nuevas tecnologías. <br />
                       También destaco especialmente en{" "}
                       <strong>
                         VueJS, Redux Saga, React Native, Android y NextJS.
@@ -167,129 +63,22 @@ const About = () => {
                 </div>
               </div>
             </div>
-            {/* Services */}
-            <div className="content services">
-              <div className="row">
-                <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
-                  {/* <!-- title --> */}
-                  <div className="title">
-                    <span>Our</span> Services
-                  </div>
-                </div>
-              </div>
 
-              {/* <!-- service items --> */}
-              <div className="row service-items">
-                {/* <!-- service item --> */}
-                {serviceItemData.map(({ icon_url, title, text }, index) => {
-                  return (
-                    <div
-                      className="col col-m-12 col-t-6 col-d-6 col-d-lg-6"
-                      key={index}
-                    >
-                      <div className="service-item card-box">
-                        <div className="icon">
-                          <i className={icon_url}></i>
-                        </div>
-                        <div className="name">{title}</div>
-                        <p>{text}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            {/* // Price Tables */}
-            <div className="content pricing">
-              <div className="row">
-                <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
-                  {/* <!-- title --> */}
-                  <div className="title">
-                    <span>Pricing</span> Tables
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- pricing items --> */}
-              <div className="row pricing-items">
-                {/* <!-- pricing item --> */}
-                <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
-                  <div className="pricing-item card-box">
-                    <div className="icon">
-                      <i className="la la-tachometer"></i>
-                    </div>
-                    <div className="name">Basic</div>
-                    <div className="amount">
-                      <span className="dollar">$</span>
-                      <span className="number">22</span>
-                      <span className="period">hour</span>
-                    </div>
-                    <div className="feature-list">
-                      <ul>
-                        <li>Web Development</li>
-                        <li>Advetising</li>
-                        <li>Game Development</li>
-                        <li className="disable">Music Writing</li>
-                        <li className="disable">
-                          Photography <strong>new</strong>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="lnks">
-                      <a href="#buy" className="lnk">
-                        Buy <span>Basic</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* <!-- pricing item --> */}
-                <div className="col col-m-12 col-t-6 col-d-6 col-d-lg-6">
-                  <div className="pricing-item card-box">
-                    <div className="icon">
-                      <i className="la la-rocket"></i>
-                    </div>
-                    <div className="name">Pro</div>
-                    <div className="amount">
-                      <span className="dollar">$</span>
-                      <span className="number">48</span>
-                      <span className="period">hour</span>
-                    </div>
-                    <div className="feature-list">
-                      <ul>
-                        <li>Web Development</li>
-                        <li>Advetising</li>
-                        <li>Game Development</li>
-                        <li>Music Writing</li>
-                        <li>
-                          Photography <strong>new</strong>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="lnks">
-                      <a href="#buy" className="lnk">
-                        Buy <span>Pro</span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* // <!--	Fun Fact --> */}
+            {/* // <!--	Tecnologías --> */}
             <div className="content fuct">
               <div className="row">
                 <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
                   {/* <!-- title --> */}
                   <div className="title">
-                    <span>Fun</span> Facts
+                    <span>Tecnologías</span> principales
                   </div>
                 </div>
               </div>
 
-              {/* <!-- fuct items --> */}
+              {/* <!-- Tecnologías items --> */}
               <div className="row fuct-items">
-                {/* <!-- fuct item --> */}
-                {FactsData.map(({ icon_url, title }, index) => {
+                {/* <!-- Tecnologías item --> */}
+                {technologiesList.map(({ icon_url, title }, index) => {
                   return (
                     <div
                       className="col col-m-6 col-t-6 col-d-3 col-d-lg-3"
@@ -297,41 +86,9 @@ const About = () => {
                     >
                       <div className="fuct-item card-box">
                         <div className="icon">
-                          <i className={icon_url}></i>
+                            <i class={icon_url}></i>
                         </div>
                         <div className="name">{title}</div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-            {/* <!--Clients --> */}
-            <div className="content clients">
-              <div className="row">
-                <div className="col col-m-12 col-t-12 col-d-12 col-d-lg-12">
-                  {/* <!-- title --> */}
-                  <div className="title">
-                    <span>Our</span> Clients
-                  </div>
-                </div>
-              </div>
-
-              {/* <!-- client items --> */}
-              <div className="row client-items">
-                {/* <!-- client item --> */}
-                {clientData.map(({ image_url, link, text }, index) => {
-                  return (
-                    <div
-                      className="col col-m-6 col-t-6 col-d-3 col-d-lg-3"
-                      key={index}
-                    >
-                      <div className="client-item card-box">
-                        <div className="image">
-                          <a target="_blank" rel="noreferrer"  href={link}>
-                            <img src={image_url} alt={text} />
-                          </a>
-                        </div>
                       </div>
                     </div>
                   );
